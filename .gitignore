@@ -1,0 +1,29 @@
+# Environment
+.env
+*.env.local
+
+# Backend
+backend/target/
+backend/*.log
+*.class
+*.jar
+!backend/target/sgnexasoft-backend-1.0.0.jar
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/.env.local
+frontend/.env.production
+
+# Uploads
+uploads/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store
+
+# Logs
+*.log
+logs/

@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+
+  db:
+    image: mysql:8.0
+    container_name: sgnexasoft-db-dev
+    restart: always
+    environment:
+      MYSQL_DATABASE: sgnexasoft_db
+      MYSQL_ROOT_PASSWORD: rootpass123
+      MYSQL_USER: sguser
+      MYSQL_PASSWORD: sgpass123
+    volumes:
+      - mysql_dev_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-prootpass123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql_dev_data:
