@@ -55,13 +55,6 @@ export default function Login() {
           Don't have an account?{' '}
           <Link to="/register" className="text-indigo-600 font-medium hover:underline">Sign up</Link>
         </p>
-
-        <div className="mt-6 p-4 bg-gray-50 rounded-lg text-xs text-gray-500 space-y-1">
-          <p className="font-medium text-gray-600">Demo accounts:</p>
-          <p>Admin: admin@sg.com / admin123</p>
-          <p>Client: client@sg.com / client123</p>
-          <p>Student: student@sg.com / student123</p>
-        </div>
       </div>
     </div>
   );
